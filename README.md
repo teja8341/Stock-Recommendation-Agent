@@ -77,7 +77,7 @@ The agent provides structured output including:
 
 The agent can be customized by modifying the following parameters in `finance_comparison_agent.py`:
 
-- `company_news`: Toggle news fetching (Default: False, uses DuckDuckGo instead)
+- `company_news`: Toggle news fetching (Default: False, uses Google search instead)
 - `analyst_recommendations`: Include analyst recommendations (Default: True)
 - `stock_fundamentals`: Include fundamental analysis (Default: True)
 - `technical_indicators`: Include technical analysis (Default: True)
@@ -114,4 +114,4 @@ Feel free to submit issues, fork the repository, and create pull requests for an
 - Built with [Agno Framework](https://github.com/agno)
 - Uses Google's Gemini AI model
 - Financial data provided by YFinance
-- News data from DuckDuckGo 
+- News data from Google search 

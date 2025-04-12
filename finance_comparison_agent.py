@@ -2,12 +2,10 @@ import os
 from dotenv import load_dotenv
 from agno.agent import Agent
 from agno.models.google import Gemini
-# Import both YFinanceTools and DuckDuckGoTools
 from agno.tools.yfinance import YFinanceTools
 from agno.tools.duckduckgo import DuckDuckGoTools
+from agno.tools.googlesearch import GoogleSearchTools
 
-# Assuming financial data/recommendation tools are available or handled by the model + web search
-# If specific tools like yfinance or similar are part of Agno, they should be added here.
 
 load_dotenv()
 
@@ -16,7 +14,7 @@ class FinanceComparisonAgent(Agent):
         super().__init__(
             model=Gemini(id="gemini-2.0-flash-001"),
             tools=[
-                DuckDuckGoTools(),
+                GoogleSearchTools(),
                 # Enable all YFinanceTools options except company_news
                 YFinanceTools(
                     company_news=False, # Keep using DuckDuckGo for news
