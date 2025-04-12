@@ -3,7 +3,6 @@ from dotenv import load_dotenv
 from agno.agent import Agent
 from agno.models.google import Gemini
 from agno.tools.yfinance import YFinanceTools
-from agno.tools.duckduckgo import DuckDuckGoTools
 from agno.tools.googlesearch import GoogleSearchTools
 
 
@@ -17,7 +16,7 @@ class FinanceComparisonAgent(Agent):
                 GoogleSearchTools(),
                 # Enable all YFinanceTools options except company_news
                 YFinanceTools(
-                    company_news=False, # Keep using DuckDuckGo for news
+                    company_news=False, # Keep using Google search for news
                     analyst_recommendations=True,
                     stock_price=True,
                     company_info=True,
